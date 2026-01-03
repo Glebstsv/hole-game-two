@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameArea = document.createElement('div');
   gameArea.className = 'game-area';
   
-  app.appendChild(gameArea);
+  app.append(gameArea);
   initGame(gameArea);
 });

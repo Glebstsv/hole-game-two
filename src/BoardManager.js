@@ -27,11 +27,11 @@ export default class BoardManager {
       cell.className = 'cell';
       cell.dataset.cellIndex = i;
       cell.setAttribute('role', 'gridcell');
-      grid.appendChild(cell);
+      grid.append(cell);
       this.cells.push(cell);
     }
 
-    this.container.appendChild(grid);
+    this.container.append(grid);
     return grid;
   }
 
@@ -104,7 +104,7 @@ export default class BoardManager {
       newIndex = Math.floor(Math.random() * this.totalCells);
     } while (newIndex === this.currentGoblinIndex);
 
-    this.cells[newIndex].appendChild(this.goblinElement);
+    this.cells[newIndex].append(this.goblinElement);
     this.cells[newIndex].classList.add('active');
     this.currentGoblinIndex = newIndex;
   }
