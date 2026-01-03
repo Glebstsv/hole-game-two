@@ -1,8 +1,10 @@
+
 {
   "env": {
     "browser": true,
     "es2021": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
@@ -12,5 +14,21 @@
   "rules": {
     "no-unused-vars": ["warn"],
     "no-console": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "webpack.config.js",
+        "jest.config.js", 
+        "babel.config.js",
+        "__mocks__/**/*.js"
+      ],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }
