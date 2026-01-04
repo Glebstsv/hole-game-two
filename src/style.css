@@ -126,3 +126,51 @@ h1 {
 .goblin {
   animation: bounce 0.5s infinite alternate;
 }
+
+.game-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 1000;
+  text-align: center;
+  min-width: 300px;
+  max-width: 80%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+.game-message.info {
+  background-color: #4caf50;
+  color: white;
+}
+
+.game-message.error {
+  background-color: #f44336;
+  color: white;
+  border-left: 5px solid #c62828;
+}
+
+.game-message.hidden {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Дополнительные стили */
+.game-ui {
+  margin-bottom: 20px;
+  text-align: center;
+}
